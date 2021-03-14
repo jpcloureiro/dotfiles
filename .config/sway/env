@@ -1,0 +1,9 @@
+export CLUTTER_BACKEND=wayland
+export XDG_CURRENT_DESKTOP=sway
+export XDG_BASE_DIRECTORY=$HOME
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_SESSION_TYPE=wayland
+export MOZ_ENABLE_WAYLAND=1
+export MOZ_WEBRENDER=1
+export EDITOR=nvim
+export PATH=$PATH:$HOME/.local/bin
