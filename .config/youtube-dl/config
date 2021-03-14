@@ -1,0 +1,1 @@
+--format 'bestvideo[width<=1920][vcodec!*=av01]+bestaudio/best[height<=1920]'
