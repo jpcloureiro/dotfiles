@@ -22,5 +22,3 @@ MYBIN=$HOME/bin
 PYBIN=$HOME/.local/bin
 
 export PATH=$NODENV:$MYBIN:$PYBIN:$PATH
-
-exec fish

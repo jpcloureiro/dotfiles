@@ -66,11 +66,11 @@
         "format-alt": "{time} {icon}",
         "format-icons": ["", "", "", "", ""]
     },
-    
+
     "custom/keyboard-layout": {
-      "exec": "swaymsg -t get_inputs | jq -r '.[] | select(.identifier == \"1:1:AT_Translated_Set_2_keyboard\") | .xkb_active_layout_name'",
+      "exec": "swaymsg -t get_inputs | jq -r 'first(.[] | select(.type == \"keyboard\") | .xkb_active_layout_name)'",
       // Interval set only as a fallback, as the value is updated by signal
-      "interval": 10,
+      "interval": 5,
       "format": "  {}", // Icon: keyboard
       "tooltip": false
     },
@@ -99,7 +99,7 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
-    }, 
+    },
     "tray": {
         "icon-size": 16,
         "spacing": 10
