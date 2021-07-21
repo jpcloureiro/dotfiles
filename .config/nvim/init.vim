@@ -32,6 +32,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'prettier/vim-prettier'
 Plug 'hrsh7th/nvim-compe'
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 lua << EOF
@@ -168,6 +169,7 @@ let b:ale_fixers = ['prettier', 'eslint']
 
 let mapleader = " "
 nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > " )})<CR>
+nnoremap <C-p> :GFiles<CR>
 
 fun! TrimWhitespace()
   let l:save = winsaveview()
