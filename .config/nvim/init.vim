@@ -72,9 +72,30 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { "tsserver" }
+local servers = { "tsserver", "rust_analyzer" }
+local servers_settings = {
+  ["tsserver"] = {},
+  ["rust-analyzer"] = {
+    assist = {
+      importGranularity = "module",
+      importPrefix = "by_self",
+    },
+    cargo = {
+      loadOutDirsFromCheck = true
+    },
+    procMacro = {
+      enable = true
+    },
+  }
+}
+
 for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup { on_attach = on_attach }
+  nvim_lsp[lsp].setup {
+    on_attach = on_attach,
+    settings = {
+      [lsp] = servers_settings[lsp],
+      }
+    }
 end
 
 -- Compe setup
