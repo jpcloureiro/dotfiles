@@ -15,6 +15,7 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
+set noshowmode
 set termguicolors
 set scrolloff=8
 set colorcolumn=80
@@ -33,6 +34,10 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'prettier/vim-prettier'
 Plug 'hrsh7th/nvim-compe'
 Plug 'junegunn/fzf.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'edkolev/tmuxline.vim'
 call plug#end()
 
 lua << EOF
@@ -147,6 +152,7 @@ let g:netrw_banner = 0
 let b:ale_fixers = ['prettier', 'eslint']
 
 let mapleader = " "
+
 nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > " )})<CR>
 nnoremap <C-p> :GFiles<CR>
 
