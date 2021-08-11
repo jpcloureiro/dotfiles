@@ -1,6 +1,7 @@
 set exrc
 set relativenumber
 set nohlsearch
+set guicursor=
 set hidden
 set noerrorbells
 set tabstop=2 softtabstop=2
@@ -28,8 +29,9 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 Plug 'airblade/vim-gitgutter'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter', { 'branch': '0.5-compat', 'do': ':TSUpdate'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'prettier/vim-prettier'
 Plug 'hrsh7th/nvim-compe'
