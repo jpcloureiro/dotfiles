@@ -82,7 +82,7 @@ exec swayidle -w \
 # resumed. It will also lock your screen before your computer goes to sleep.
 #
 
-bindsym $mod+$alt+l exec swaylock -f
+bindsym $mod+$alt+l exec swaylock
 
 ### Input configuration
 
