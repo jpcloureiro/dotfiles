@@ -1,2 +1,4 @@
 color=222222
 inside-color=282828
+debug
+daemonize
