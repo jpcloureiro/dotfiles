@@ -56,9 +56,12 @@ xrandr --output DVI-D-0 --rotate right
 
 # clipboard manager daemon
 clipmenud &
+
 # notifications daemon
 dunst &
+
 # terminal emulator urxvt daemon
 urxvtd -q -f -o
-execute i3 window manager
+
+# execute i3 window manager
 exec /usr/bin/i3
