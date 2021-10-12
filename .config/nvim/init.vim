@@ -15,8 +15,12 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
+set autoindent
+set noshowmode
 set termguicolors
 set scrolloff=8
+set guicursor=
+set completeopt=menuone,noinsert,noselect
 set colorcolumn=80
 set signcolumn=yes
 set updatetime=100
@@ -33,6 +37,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'prettier/vim-prettier'
 Plug 'hrsh7th/nvim-compe'
 Plug 'junegunn/fzf.vim'
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
 lua << EOF
