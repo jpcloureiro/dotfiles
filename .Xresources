@@ -14,7 +14,7 @@ URxvt.letterSpace: -1
 URxvt.geometry: 84x36
 
 URxvt.scrollstyle: plain
-URxvt.scrollBar: true
+URxvt.scrollBar: false
 URxvt.scrollBar_right: true
 URxvt.iconFile: /usr/share/icons/Paper/48x48/apps/utilities-terminal.png
 URxvt.cursorBlink: true
@@ -34,9 +34,13 @@ URxvt.saveLines: 16384
 URxvt.depth: 32
 
 ! Clickble URLs
-URxvt.perl-ext-common: default,matcher
-URxvt.url-launcher: /usr/bin/x-www-browser
+URxvt.perl-ext-common: default,matcher,clipboard
+URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 3
+
+URxvt.clipboard.autocopy: true
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
 
 ! -----------------------------------------------------------------------------
 ! File: gruvbox-urxvt256.xresources
